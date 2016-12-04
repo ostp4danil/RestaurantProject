@@ -38,4 +38,11 @@ public abstract class RestaurantModel {
     public int hashCode() {
         return name != null ? name.hashCode() : 0;
     }
+
+    @Override
+    public String toString() {
+        return super.getClass().getSimpleName()+" :" +
+                "ID=" + ID +
+                ", name='" + name + '\''+ "\n";
+    }
 }

@@ -1,16 +1,22 @@
 package com.restautant.controller.dao;
 
+import java.util.List;
+
 /**
  * Created by Danil-MAC on 12/4/16.
  */
 public interface DAO<T> {
 
-    public void  create(T object);
+    void  create(T object);
 
-    public void remove(T object);
+    void remove(T object);
 
-    public void update(T object, String oldName);
+    void removeAll();
 
-    public T read(String name);
+    void update(T object, String oldName);
+
+    T read(String name);
+
+    List<? extends T> readAll();
 
 }

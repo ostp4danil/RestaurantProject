@@ -1,11 +1,14 @@
 package com.restautant.model;
 
+import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 import java.util.List;
 
 /**
- * Created by Danil-MAC on 12/2/16.
+ * Created by Danil-MAC on 11/30/16.
  */
-public class Menu extends RestaurantModel {
+
+public class Cook extends Employee{
 
     private List<Dish> dishes;
 
@@ -16,6 +19,5 @@ public class Menu extends RestaurantModel {
     public void setDishes(List<Dish> dishes) {
         this.dishes = dishes;
     }
-
 
 }
