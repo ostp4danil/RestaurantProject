@@ -19,7 +19,11 @@ public class InMemoryDAO<T extends Model> implements DAO {
 
     @Override
     public void remove(Model model) {
-        modelsData.remove(model);
+        try {
+            modelsData.remove(model);
+        } catch (RuntimeException e){
+            e.printStackTrace();
+        }
     }
 
     @Override

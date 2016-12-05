@@ -6,9 +6,9 @@ import com.restautant.model.Dish;
 import com.restautant.model.Model;
 import com.restautant.model.Order;
 import com.restautant.model.Waiter;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import sun.util.calendar.*;
 
 import java.sql.Date;
 
@@ -16,13 +16,27 @@ import java.sql.Date;
 /**
  * Created by Danil-MAC on 12/5/16.
  */
-public class OrderInMemoryDAOTest {
+public class InMemoryDAOTest {
 
     private DAO orderInMemoryDAO;
+    private DAO dishInMemoryDAO;
+
 
     @Before
     public void setUp(){
+        dishInMemoryDAO = new InMemoryDAO<Dish>();
         orderInMemoryDAO = new InMemoryDAO<Order>();
+    }
+
+    @Before
+    public void create20Dishes(){
+        for (int i=1; i<=20; i++) {
+            Model dish = new Dish();
+            dish.setName("Dish" + i);
+            dish.setID(hashCode());
+            dishInMemoryDAO.create(dish);
+        }
+        Assert.assertEquals(20,dishInMemoryDAO.readAll().size());
     }
 
     @Test
@@ -40,6 +54,29 @@ public class OrderInMemoryDAOTest {
             order.setName("Client: "+i);
             orderInMemoryDAO.create(order);
         }
+        Assert.assertEquals(20,orderInMemoryDAO.readAll().size());
+    }
+
+    @Test
+    public void printAllDishTest(){
+        System.out.println(dishInMemoryDAO.readAll().toString());
+    }
+
+    @Test
+    public void printAllDishTest_WhenEmptyListPrintBraces(){
+        dishInMemoryDAO.removeAll();
+        Assert.assertEquals(dishInMemoryDAO.readAll().toString(),"[]");
+    }
+
+    @Test
+    public void printAllOrderTest(){
         System.out.println(orderInMemoryDAO.readAll().toString());
+    }
+
+
+    @Test(expected = RuntimeException.class)
+    public void removeAll_WhenEmptyListThenNullPointerException(){
+        dishInMemoryDAO.removeAll();
+        dishInMemoryDAO.removeAll();
     }
 }
