@@ -2,10 +2,7 @@ package com.restautant.controller.dao;
 
 import com.restautant.model.Model;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Created by Danil-MAC on 12/4/16.
@@ -60,7 +57,7 @@ public class InMemoryDAO<T extends Model> implements DAO {
     }
 
     @Override
-    public List<? extends Model> readAll() {
+    public Collection<? extends Model> readAll() {
         List<Model> modelsDataList = new ArrayList<Model>();
         modelsDataList.addAll(modelsData);
         return modelsDataList;

@@ -42,6 +42,7 @@ public class DishInMemoryDAOTest {
         Assert.assertEquals(dishInMemoryDAO.readAll().toString(),"[]");
     }
 
+
     @Test(expected = RuntimeException.class)
     public void removeAll_WhenEmptyListThenNullPointerException(){
         dishInMemoryDAO.removeAll();

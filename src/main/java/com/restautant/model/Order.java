@@ -1,20 +1,20 @@
 package com.restautant.model;
 
 
-import sun.util.calendar.BaseCalendar.Date;
-
 import javax.persistence.*;
+import java.sql.Date;
 
 /**
  * Created by Danil-MAC on 11/28/16.
  */
-public class Order {
+public class Order extends Model {
 
     private Date date;
 
     private Waiter waiter;
 
     private int tableNumber;
+
 
     public Date getDate() {
         return date;
@@ -40,4 +40,11 @@ public class Order {
         this.tableNumber = tableNumber;
     }
 
+    @Override
+    public String toString() {
+        return super.toString() + date +
+                ", waiter=" + waiter +
+                ", tableNumber=" + tableNumber + '\'' +
+                '\n';
+    }
 }

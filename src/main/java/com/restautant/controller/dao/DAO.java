@@ -2,6 +2,7 @@ package com.restautant.controller.dao;
 
 import com.restautant.model.Model;
 
+import java.util.Collection;
 import java.util.List;
 
 /**
@@ -19,5 +20,5 @@ public interface DAO {
 
     Model read(String name);
 
-    List<? extends Model> readAll();
+    Collection<? extends Model> readAll();
 }
