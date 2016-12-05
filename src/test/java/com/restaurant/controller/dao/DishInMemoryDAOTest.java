@@ -1,13 +1,10 @@
 package com.restaurant.controller.dao;
 
-import com.restautant.controller.dao.InMemoryRestaurantDAO;
+import com.restautant.controller.dao.DAO;
+import com.restautant.controller.dao.InMemoryDAO;
 import com.restautant.model.Dish;
-import com.restautant.model.RestaurantModel;
-import com.sun.deploy.security.ruleset.RuleParseException;
-import com.sun.tools.internal.ws.wsdl.document.jaxws.Exception;
-import com.sun.tools.javah.Util;
+import com.restautant.model.Model;
 import org.junit.*;
-import org.junit.rules.ExpectedException;
 
 
 /**
@@ -15,17 +12,17 @@ import org.junit.rules.ExpectedException;
  */
 public class DishInMemoryDAOTest {
 
-    private  InMemoryRestaurantDAO<Dish> dishInMemoryDAO;
+    private DAO dishInMemoryDAO;
 
     @Before
     public void setUp(){
-        dishInMemoryDAO = new InMemoryRestaurantDAO();
+        dishInMemoryDAO = new InMemoryDAO();
     }
 
     @Before
     public void create20Dishes(){
         for (int i=1; i<=20; i++) {
-            RestaurantModel dish = new Dish();
+            Model dish = new Dish();
             dish.setName("Dish" + i);
             dish.setID(hashCode());
             dishInMemoryDAO.create(dish);

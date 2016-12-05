@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Created by Danil-MAC on 12/2/16.
  */
-public class Dish extends RestaurantModel {
+public class Dish extends Model {
 
     private List<Ingredient> ingredients;
 

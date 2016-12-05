@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Created by Danil-MAC on 12/2/16.
  */
-public class Menu extends RestaurantModel {
+public class Menu extends Model {
 
     private List<Dish> dishes;
 

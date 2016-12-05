@@ -3,7 +3,7 @@ package com.restautant.model;
 /**
  * Created by Danil-MAC on 12/4/16.
  */
-public abstract class RestaurantModel {
+public abstract class Model {
 
     private int ID;
     private String name;
@@ -28,7 +28,7 @@ public abstract class RestaurantModel {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        RestaurantModel that = (RestaurantModel) o;
+        Model that = (Model) o;
 
         return name != null ? name.equals(that.name) : that.name == null;
 

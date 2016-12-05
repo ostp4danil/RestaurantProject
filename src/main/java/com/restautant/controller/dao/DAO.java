@@ -1,22 +1,23 @@
 package com.restautant.controller.dao;
 
+import com.restautant.model.Model;
+
 import java.util.List;
 
 /**
- * Created by Danil-MAC on 12/4/16.
+ * Created by Danil-MAC on 12/5/16.
  */
-public interface DAO<T> {
+public interface DAO {
 
-    void  create(T object);
+    void create(Model object);
 
-    void remove(T object);
+    void remove(Model object);
 
     void removeAll();
 
-    void update(T object, String oldName);
+    void update(Model object, String oldName);
 
-    T read(String name);
+    Model read(String name);
 
-    List<? extends T> readAll();
-
+    List<? extends Model> readAll();
 }
