@@ -43,6 +43,6 @@ public abstract class Model {
     public String toString() {
         return super.getClass().getSimpleName()+" :" +
                 "ID=" + ID +
-                ", name='" + name + ", ";
+                ", name='" + name;
     }
 }

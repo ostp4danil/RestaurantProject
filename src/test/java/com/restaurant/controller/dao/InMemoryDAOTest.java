@@ -29,18 +29,18 @@ public class InMemoryDAOTest {
     }
 
     @Before
-    public void create20Dishes(){
+    public void createAndAdd20Dishes(){
         for (int i=1; i<=20; i++) {
             Model dish = new Dish();
             dish.setName("Dish" + i);
             dish.setID(hashCode());
-            dishInMemoryDAO.create(dish);
+            dishInMemoryDAO.add(dish);
         }
         Assert.assertEquals(20,dishInMemoryDAO.readAll().size());
     }
 
     @Test
-    public void create20OrderTest(){
+    public void createAndAdd20OrderTest(){
         for(int i =1; i<=20; i++){
             Order order = new Order();
             Waiter waiter = new Waiter();
@@ -52,7 +52,7 @@ public class InMemoryDAOTest {
             order.setDate(new Date(3,4,2106));
             order.setTableNumber(i);
             order.setName("Client: "+i);
-            orderInMemoryDAO.create(order);
+            orderInMemoryDAO.add(order);
         }
         Assert.assertEquals(20,orderInMemoryDAO.readAll().size());
     }

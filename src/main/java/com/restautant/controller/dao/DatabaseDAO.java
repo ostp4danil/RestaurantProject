@@ -13,7 +13,7 @@ public class DatabaseDAO<T extends DAO> implements DAO {
     private SessionFactory sessionFactory;
 
     @Override
-    public void create(Model object) {
+    public void add(Model object) {
 
     }
 

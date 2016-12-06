@@ -10,7 +10,7 @@ import java.util.List;
  */
 public interface DAO {
 
-    void create(Model object);
+    void add(Model object);
 
     void remove(Model object);
 

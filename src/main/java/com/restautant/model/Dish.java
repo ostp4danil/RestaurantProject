@@ -17,4 +17,9 @@ public class Dish extends Model {
         this.ingredients = ingredients;
     }
 
+    @Override
+    public String toString() {
+        return "Ingredients: "
+                + super.toString() + "\n";
+    }
 }

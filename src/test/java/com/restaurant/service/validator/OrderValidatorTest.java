@@ -1,20 +1,14 @@
 package com.restaurant.service.validator;
 
-import com.restautant.controller.dao.DAO;
-import com.restautant.model.Dish;
 import com.restautant.model.Order;
-import com.restautant.model.Waiter;
-import com.restautant.service.validator.DishValidator;
 import com.restautant.service.validator.OrderValidator;
 import com.restautant.service.validator.Validator;
-import com.restautant.service.validator.WaiterValidator;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.sql.Date;
-import java.util.ArrayList;
-import java.util.List;
+
 
 /**
  * Created by Danil-MAC on 12/5/16.

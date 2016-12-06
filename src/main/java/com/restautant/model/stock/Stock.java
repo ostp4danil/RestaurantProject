@@ -1,4 +1,6 @@
-package com.restautant.model;
+package com.restautant.model.stock;
+
+import com.restautant.model.Ingredient;
 
 import javax.persistence.*;
 import java.util.Map;

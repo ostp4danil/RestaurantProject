@@ -13,7 +13,7 @@ public class InMemoryDAO<T extends Model> implements DAO {
 
 
     @Override
-    public void create(Model model) {
+    public void add(Model model) {
         modelsData.add(model);
     }
 
@@ -62,7 +62,7 @@ public class InMemoryDAO<T extends Model> implements DAO {
 
     @Override
     public Collection<? extends Model> readAll() {
-        List<Model> modelsDataList = new ArrayList<Model>();
+        Set<Model> modelsDataList = new HashSet<Model>();
         modelsDataList.addAll(modelsData);
         return modelsDataList;
     }
