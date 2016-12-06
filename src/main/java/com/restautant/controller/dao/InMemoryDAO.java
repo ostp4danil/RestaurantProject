@@ -7,13 +7,13 @@ import java.util.*;
 /**
  * Created by Danil-MAC on 12/4/16.
  */
-public class InMemoryDAO<T extends Model> implements DAO {
+public class InMemoryDAO<T extends Model> implements DAO<T> {
 
-    private Set<Model> modelsData = new HashSet<Model>();
+    private Set<T> modelsData = new HashSet<>();
 
 
     @Override
-    public void add(Model model) {
+    public void add(T model) {
         modelsData.add(model);
     }
 
@@ -35,9 +35,9 @@ public class InMemoryDAO<T extends Model> implements DAO {
     }
 
     @Override
-    public void update(Model model, String oldName) {
+    public void update(T model, String oldName) {
         boolean needException = true;
-        for (Model item : modelsData) {
+        for (T item : modelsData) {
             if (oldName.equalsIgnoreCase(item.getName())) {
                 modelsData.remove(model);
                 needException = false;
@@ -50,8 +50,8 @@ public class InMemoryDAO<T extends Model> implements DAO {
     }
 
     @Override
-    public Model read(String name) {
-        for (Model model : modelsData) {
+    public T read(String name) {
+        for (T model : modelsData) {
             if (name.equalsIgnoreCase(model.getName())) {
                 return model;
             }
@@ -61,8 +61,8 @@ public class InMemoryDAO<T extends Model> implements DAO {
     }
 
     @Override
-    public Collection<? extends Model> readAll() {
-        Set<Model> modelsDataList = new HashSet<Model>();
+    public Collection<? extends T> readAll() {
+        Set<T> modelsDataList = new HashSet<>();
         modelsDataList.addAll(modelsData);
         return modelsDataList;
     }

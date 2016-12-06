@@ -1,4 +1,4 @@
-package com.restautant.service.validator;
+package com.restautant.validator;
 
 /**
  * Created by Danil-MAC on 12/5/16.

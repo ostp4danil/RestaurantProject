@@ -8,17 +8,17 @@ import java.util.List;
 /**
  * Created by Danil-MAC on 12/5/16.
  */
-public interface DAO {
+public interface DAO<T> {
 
-    void add(Model object);
+    void add(T object);
 
-    void remove(Model object);
+    void remove(T object);
 
     void removeAll();
 
-    void update(Model object, String oldName);
+    void update(T object, String oldName);
 
-    Model read(String name);
+    T read(String name);
 
-    Collection<? extends Model> readAll();
+    Collection<? extends T> readAll();
 }

@@ -1,10 +1,8 @@
 package com.restaurant.service.validator;
 
 import com.restautant.model.Ingredient;
-import com.restautant.model.Model;
-import com.restautant.service.validator.IngredientValidator;
-import com.restautant.service.validator.ModelValidator;
-import com.restautant.service.validator.Validator;
+import com.restautant.validator.IngredientValidator;
+import com.restautant.validator.Validator;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

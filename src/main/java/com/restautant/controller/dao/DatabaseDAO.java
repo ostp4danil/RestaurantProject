@@ -3,6 +3,7 @@ package com.restautant.controller.dao;
 import com.restautant.model.Model;
 import org.hibernate.SessionFactory;
 
+import java.util.Collection;
 import java.util.List;
 
 /**
@@ -13,12 +14,12 @@ public class DatabaseDAO<T extends DAO> implements DAO {
     private SessionFactory sessionFactory;
 
     @Override
-    public void add(Model object) {
+    public void add(Object object) {
 
     }
 
     @Override
-    public void remove(Model object) {
+    public void remove(Object object) {
 
     }
 
@@ -28,17 +29,17 @@ public class DatabaseDAO<T extends DAO> implements DAO {
     }
 
     @Override
-    public void update(Model object, String oldName) {
+    public void update(Object object, String oldName) {
 
     }
 
     @Override
-    public Model read(String name) {
+    public Object read(String name) {
         return null;
     }
 
     @Override
-    public List<? extends Model> readAll() {
+    public Collection readAll() {
         return null;
     }
 }

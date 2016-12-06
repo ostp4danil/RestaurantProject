@@ -1,8 +1,7 @@
 package com.restautant.service;
 
 import com.restautant.controller.dao.DAO;
-import com.restautant.model.Dish;
-import com.restautant.service.validator.Validator;
+import com.restautant.validator.Validator;
 
 import java.util.Set;
 
@@ -17,7 +16,7 @@ public interface Service<T> {
 
     void remove(T object);
 
-    Set<? extends T> getAll();
+    Set<T> getAll();
 
     DAO getDAO();
 
@@ -25,7 +24,7 @@ public interface Service<T> {
 
     void setAvailableModels(Set<T> availableModels);
 
-    Validator<? super T> getValidator();
+    Validator<T> getValidator();
 
-    void setValidator(Validator<? super T> validator);
+    void setValidator(Validator<T> validator);
 }

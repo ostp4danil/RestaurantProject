@@ -1,4 +1,4 @@
-package com.restautant.service.validator;
+package com.restautant.validator;
 
 import com.restautant.model.Order;
 

@@ -6,7 +6,8 @@ import com.restautant.model.Dish;
 import com.restautant.model.Model;
 import com.restautant.service.ModelService;
 import com.restautant.service.Service;
-import com.restautant.service.validator.IngredientValidator;
+import com.restautant.service.WaiterService;
+import com.restautant.validator.IngredientValidator;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -49,5 +50,7 @@ public class ModelServiceTest {
         dishService.remove(dishInMemoryDAO.read("Dish5"));
         dishService.synchronize();
         System.out.println(dishService.getAll().toString());
+        WaiterService waiterService = new WaiterService();
+        waiterService.sorty();
     }
 }

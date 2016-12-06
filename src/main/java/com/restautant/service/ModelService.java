@@ -2,22 +2,21 @@ package com.restautant.service;
 
 import com.restautant.controller.dao.DAO;
 import com.restautant.model.Model;
-import com.restautant.service.validator.Validator;
+import com.restautant.validator.Validator;
 
-import java.util.Collection;
 import java.util.Set;
 
-public class ModelService<T extends Model> implements Service<T> {
+public abstract class ModelService<T extends Model> implements Service<T> {
 
-    private DAO modelDAO;
+    private DAO<T> modelDAO;
     private Set<T> availableModels;
-    private Validator<? super T> validator;
+    private Validator<T> validator;
 
 
     @Override
     public void synchronize() {
         availableModels.retainAll(modelDAO.readAll());
-        availableModels.addAll((Collection<? extends T>) modelDAO.readAll());
+        availableModels.addAll(modelDAO.readAll());
     }
 
     @Override
@@ -30,7 +29,7 @@ public class ModelService<T extends Model> implements Service<T> {
     }
 
     @Override
-    public Set<? extends T> getAll() {
+    public Set<T> getAll() {
         synchronize();
         return availableModels;
     }
@@ -47,8 +46,8 @@ public class ModelService<T extends Model> implements Service<T> {
     }
 
     @Override
-    public void setDAO(DAO dishDao) {
-        this.modelDAO = dishDao;
+    public void setDAO(DAO modelDao) {
+        this.modelDAO = modelDao;
     }
 
     @Override
@@ -58,12 +57,12 @@ public class ModelService<T extends Model> implements Service<T> {
     }
 
     @Override
-    public Validator<? super T> getValidator() {
+    public Validator<T> getValidator() {
         return validator;
     }
 
     @Override
-    public void setValidator(Validator<? super T> validator) {
+    public void setValidator(Validator<T> validator) {
         this.validator = validator;
     }
 
