@@ -1,4 +1,4 @@
-package com.restaurant.service.validator;
+package com.restaurant.validator;
 
 import com.restautant.model.Dish;
 import com.restautant.validator.DishValidator;
@@ -8,6 +8,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
 /**
  * Created by Danil-MAC on 12/5/16.
@@ -23,7 +24,7 @@ public class DishValidatorTest {
     @Test
     public void setIngredientValidator(){
         Dish dish = new Dish();
-        dish.setIngredients(new ArrayList<>());
+        dish.setIngredients(new HashSet<>());
         dish.setName("test");
         boolean answer = dishValidator.isValid(dish);
         Assert.assertEquals(false, answer);

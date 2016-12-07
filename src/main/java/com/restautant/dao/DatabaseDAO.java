@@ -1,10 +1,8 @@
-package com.restautant.controller.dao;
+package com.restautant.dao;
 
-import com.restautant.model.Model;
 import org.hibernate.SessionFactory;
 
 import java.util.Collection;
-import java.util.List;
 
 /**
  * Created by Danil-MAC on 12/4/16.

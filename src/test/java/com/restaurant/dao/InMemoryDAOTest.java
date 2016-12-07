@@ -1,7 +1,7 @@
-package com.restaurant.controller.dao;
+package com.restaurant.dao;
 
-import com.restautant.controller.dao.DAO;
-import com.restautant.controller.dao.InMemoryDAO;
+import com.restautant.dao.DAO;
+import com.restautant.dao.InMemoryDAO;
 import com.restautant.model.Dish;
 import com.restautant.model.Model;
 import com.restautant.model.Order;

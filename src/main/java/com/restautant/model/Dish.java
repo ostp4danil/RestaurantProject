@@ -1,25 +1,27 @@
 package com.restautant.model;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by Danil-MAC on 12/2/16.
  */
 public class Dish extends Model {
 
-    private List<Ingredient> ingredients;
+    private Set<Ingredient> ingredients;
 
-    public List<Ingredient> getIngredients() {
+    public Set<Ingredient> getIngredients() {
         return ingredients;
     }
 
-    public void setIngredients(List<Ingredient> ingredients) {
+    public void setIngredients(Set<Ingredient> ingredients) {
         this.ingredients = ingredients;
     }
 
     @Override
     public String toString() {
-        return "Ingredients: "
-                + super.toString() + "\n";
+        return  super.toString()
+                + "Ingredients: " + ingredients.toString()
+                + "\n";
     }
 }

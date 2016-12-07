@@ -1,4 +1,4 @@
-package com.restautant.controller.dao;
+package com.restautant.dao;
 
 import com.restautant.model.Model;
 

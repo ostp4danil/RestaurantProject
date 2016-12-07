@@ -51,10 +51,9 @@ public class Order extends Model {
 
     @Override
     public String toString() {
-        return super.toString() + date +
-                ", waiter=" + waiter +
-                ", tableNumber=" + tableNumber + '\'' +
-                '\n';
+        return super.toString() + ", date=" + date +
+                waiter +
+                ", tableNumber=" + tableNumber + "\n";
     }
 
 

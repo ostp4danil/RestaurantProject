@@ -1,6 +1,6 @@
 package com.restautant.service;
 
-import com.restautant.controller.dao.DAO;
+import com.restautant.dao.DAO;
 import com.restautant.validator.Validator;
 
 import java.util.Set;

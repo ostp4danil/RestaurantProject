@@ -1,4 +1,4 @@
-package com.restaurant.service.validator;
+package com.restaurant.validator;
 
 import com.restautant.model.Order;
 import com.restautant.validator.OrderValidator;

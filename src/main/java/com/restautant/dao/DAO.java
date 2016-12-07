@@ -1,9 +1,6 @@
-package com.restautant.controller.dao;
-
-import com.restautant.model.Model;
+package com.restautant.dao;
 
 import java.util.Collection;
-import java.util.List;
 
 /**
  * Created by Danil-MAC on 12/5/16.
