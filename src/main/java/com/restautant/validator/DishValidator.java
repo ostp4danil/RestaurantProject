@@ -5,7 +5,7 @@ import com.restautant.model.Dish;
 /**
  * Created by Danil-MAC on 12/5/16.
  */
-public class DishValidator extends ModelValidator<Dish> {
+public class DishValidator extends IModelValidator<Dish> {
 
 
 

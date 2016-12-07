@@ -13,8 +13,17 @@ public class Order extends Model {
 
     private Waiter waiter;
 
-    private int tableNumber;
+    private Integer tableNumber;
 
+    private boolean isCompleted ;
+
+    public boolean isCompleted() {
+        return isCompleted;
+    }
+
+    public void setCompleted(boolean completed) {
+        isCompleted = completed;
+    }
 
     public Date getDate() {
         return date;
@@ -32,7 +41,7 @@ public class Order extends Model {
         this.waiter = waiter;
     }
 
-    public int getTableNumber() {
+    public Integer getTableNumber() {
         return tableNumber;
     }
 
@@ -47,4 +56,6 @@ public class Order extends Model {
                 ", tableNumber=" + tableNumber + '\'' +
                 '\n';
     }
+
+
 }

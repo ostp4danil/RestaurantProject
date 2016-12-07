@@ -6,11 +6,11 @@ import com.restautant.validator.Validator;
 
 import java.util.Set;
 
-public abstract class ModelService<T extends Model> implements Service<T> {
+public abstract class IModelService<T extends Model> implements Service<T> {
 
-    private DAO<T> modelDAO;
-    private Set<T> availableModels;
-    private Validator<T> validator;
+    protected DAO<T> modelDAO;
+    protected Set<T> availableModels;
+    protected Validator<T> validator;
 
 
     @Override
@@ -26,6 +26,12 @@ public abstract class ModelService<T extends Model> implements Service<T> {
             modelDAO.add(model);
             synchronize();
         }
+    }
+
+    @Override
+    public void edit(T model, String oldName) {
+        modelDAO.update(model, oldName);
+        synchronize();
     }
 
     @Override

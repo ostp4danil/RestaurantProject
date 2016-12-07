@@ -16,6 +16,8 @@ public interface Service<T> {
 
     void remove(T object);
 
+    void edit(T object, String name);
+
     Set<T> getAll();
 
     DAO getDAO();

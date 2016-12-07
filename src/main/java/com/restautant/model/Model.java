@@ -41,8 +41,8 @@ public abstract class Model {
 
     @Override
     public String toString() {
-        return super.getClass().getSimpleName()+" :" +
+        return super.getClass().getSimpleName()+": " +
                 "ID=" + ID +
-                ", name='" + name;
+                ", name=" + name;
     }
 }

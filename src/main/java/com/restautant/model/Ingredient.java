@@ -5,5 +5,8 @@ package com.restautant.model;
  */
 public class Ingredient extends Model {
 
-
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }
