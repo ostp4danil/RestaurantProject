@@ -1,13 +1,12 @@
 package com.restaurant.validator;
 
-import com.restautant.model.Dish;
+import com.restautant.model.dish.Dish;
 import com.restautant.validator.DishValidator;
 import com.restautant.validator.Validator;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.HashSet;
 
 /**

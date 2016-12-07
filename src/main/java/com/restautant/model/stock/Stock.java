@@ -1,9 +1,8 @@
 package com.restautant.model.stock;
 
-import com.restautant.model.Ingredient;
+import com.restautant.model.ingredient.Ingredient;
 import com.restautant.model.Model;
 
-import javax.persistence.*;
 import java.util.Map;
 
 /**
@@ -24,5 +23,12 @@ public class Stock extends Model{
 
     public void setAvailableIngredients(Map<Ingredient, Integer> availableIngredients) {
         this.availableIngredients = availableIngredients;
+    }
+
+    @Override
+    public String toString() {
+        return  "Stock{" +
+                "availableIngredients=" + availableIngredients +
+                '}';
     }
 }

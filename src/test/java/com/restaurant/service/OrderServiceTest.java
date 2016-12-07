@@ -2,8 +2,8 @@ package com.restaurant.service;
 
 import com.restautant.dao.DAO;
 import com.restautant.dao.InMemoryDAO;
-import com.restautant.model.Order;
-import com.restautant.model.Waiter;
+import com.restautant.model.order.Order;
+import com.restautant.model.employee.Waiter;
 import com.restautant.service.OrderService;
 import com.restautant.validator.OrderValidator;
 import com.restautant.validator.Validator;

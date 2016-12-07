@@ -2,8 +2,8 @@ package com.restaurant.service;
 
 import com.restautant.dao.DAO;
 import com.restautant.dao.InMemoryDAO;
-import com.restautant.model.Dish;
-import com.restautant.model.Ingredient;
+import com.restautant.model.dish.Dish;
+import com.restautant.model.ingredient.Ingredient;
 import com.restautant.service.DishService;
 import com.restautant.service.Service;
 import com.restautant.validator.DishValidator;
@@ -11,9 +11,7 @@ import com.restautant.validator.IngredientValidator;
 import com.restautant.validator.Validator;
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 public class DishServiceTest {
@@ -39,7 +37,7 @@ public class DishServiceTest {
             Set<Ingredient> ingredients = new HashSet<>();
             ingredients.add(ingredient);
             Dish dish = new Dish();
-            dish.setName("Dish" + i);
+            dish.setName("dish" + i);
             dish.setID(hashCode());
             dish.setIngredients(ingredients);
             dishService.add(dish);

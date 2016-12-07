@@ -1,4 +1,6 @@
-package com.restautant.model;
+package com.restautant.model.employee;
+
+import com.restautant.model.Model;
 
 /**
  * Created by Danil-MAC on 11/28/16.

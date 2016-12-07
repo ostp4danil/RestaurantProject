@@ -62,6 +62,18 @@ public abstract class IModelService<T extends Model> implements Service<T> {
         this.availableModels = availableModels;
     }
 
+    public DAO<T> getModelDAO() {
+        return modelDAO;
+    }
+
+    public void setModelDAO(DAO<T> modelDAO) {
+        this.modelDAO = modelDAO;
+    }
+
+    public Set<T> getAvailableModels() {
+        return availableModels;
+    }
+
     @Override
     public Validator<T> getValidator() {
         return validator;

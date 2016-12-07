@@ -1,6 +1,6 @@
 package com.restaurant.validator;
 
-import com.restautant.model.Ingredient;
+import com.restautant.model.ingredient.Ingredient;
 import com.restautant.validator.IngredientValidator;
 import com.restautant.validator.Validator;
 import org.junit.Assert;

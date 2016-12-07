@@ -1,6 +1,8 @@
-package com.restautant.model;
+package com.restautant.model.menu;
 
-import java.util.List;
+import com.restautant.model.Model;
+import com.restautant.model.dish.Dish;
+
 import java.util.Set;
 
 /**

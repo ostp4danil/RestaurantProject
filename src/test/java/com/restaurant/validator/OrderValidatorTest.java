@@ -1,6 +1,6 @@
 package com.restaurant.validator;
 
-import com.restautant.model.Order;
+import com.restautant.model.order.Order;
 import com.restautant.validator.OrderValidator;
 import com.restautant.validator.Validator;
 import org.junit.Assert;

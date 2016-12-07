@@ -1,7 +1,9 @@
-package com.restautant.model;
+package com.restautant.model.order;
 
 
-import javax.persistence.*;
+import com.restautant.model.Model;
+import com.restautant.model.employee.Waiter;
+
 import java.sql.Date;
 
 /**

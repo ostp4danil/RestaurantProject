@@ -1,6 +1,6 @@
 package com.restautant.service;
 
-import com.restautant.model.Dish;
+import com.restautant.model.dish.Dish;
 
 
 /**

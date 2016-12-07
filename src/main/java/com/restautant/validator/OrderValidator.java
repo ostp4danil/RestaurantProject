@@ -1,6 +1,6 @@
 package com.restautant.validator;
 
-import com.restautant.model.Order;
+import com.restautant.model.order.Order;
 
 /**
  * Created by Danil-MAC on 12/5/16.

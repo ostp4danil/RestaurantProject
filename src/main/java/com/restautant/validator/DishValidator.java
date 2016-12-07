@@ -1,6 +1,6 @@
 package com.restautant.validator;
 
-import com.restautant.model.Dish;
+import com.restautant.model.dish.Dish;
 
 /**
  * Created by Danil-MAC on 12/5/16.

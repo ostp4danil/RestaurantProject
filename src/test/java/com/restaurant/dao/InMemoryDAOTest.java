@@ -2,10 +2,10 @@ package com.restaurant.dao;
 
 import com.restautant.dao.DAO;
 import com.restautant.dao.InMemoryDAO;
-import com.restautant.model.Dish;
+import com.restautant.model.dish.Dish;
 import com.restautant.model.Model;
-import com.restautant.model.Order;
-import com.restautant.model.Waiter;
+import com.restautant.model.order.Order;
+import com.restautant.model.employee.Waiter;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -32,7 +32,7 @@ public class InMemoryDAOTest {
     public void createAndAdd20Dishes(){
         for (int i=1; i<=20; i++) {
             Model dish = new Dish();
-            dish.setName("Dish" + i);
+            dish.setName("dish" + i);
             dish.setID(hashCode());
             dishInMemoryDAO.add(dish);
         }

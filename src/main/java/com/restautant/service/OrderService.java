@@ -1,7 +1,7 @@
 package com.restautant.service;
 
-import com.restautant.model.Order;
-import com.restautant.model.Waiter;
+import com.restautant.model.order.Order;
+import com.restautant.model.employee.Waiter;
 
 import java.sql.Date;
 import java.util.HashSet;

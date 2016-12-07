@@ -1,4 +1,6 @@
-package com.restautant.model;
+package com.restautant.model.ingredient;
+
+import com.restautant.model.Model;
 
 /**
  * Created by Danil-MAC on 12/2/16.

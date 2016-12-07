@@ -1,6 +1,6 @@
 package com.restautant.validator;
 
-import com.restautant.model.Waiter;
+import com.restautant.model.employee.Waiter;
 
 /**
  * Created by Danil-MAC on 12/5/16.
